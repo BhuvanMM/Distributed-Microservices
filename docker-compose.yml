@@ -1,0 +1,10 @@
+services:
+  broker:
+    build:
+      context: ./broker-service
+    ports:
+      - "8080:8080"
+    deploy:
+      mode: replicated
+      replicas: 1
+    restart: always
